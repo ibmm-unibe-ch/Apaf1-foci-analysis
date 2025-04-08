@@ -47,7 +47,7 @@ pip install -r requirements.txt
 ```
 
 
-The primary analysis of Apaf1 foci was performed with [CellProfiler](https://cellprofiler.org/), which is not included in the environment. Please install it separately using their official installation instructions.
+The primary analysis of Apaf1 foci was performed with [CellProfiler](https://cellprofiler.org/), which is not included in the environment. Please install it separately using their official installation instructions. The cellprofiler-pipeline file for reproducing our pipeline can be found in the **CellProfiler_Pipeline** folder. 
 
 
 
