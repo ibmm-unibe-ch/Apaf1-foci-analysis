@@ -26,6 +26,7 @@ Control frames (~2 hours before events)
 Input:
 
 ./metadata.csv
+
 ./movies/ #directory containing TIFF stacks
 
 Output:
@@ -35,15 +36,26 @@ Output:
 
 ## Requirements and Installation
 
-The analysis was performed mainly with the open-source software [CellProfiler](https://cellprofiler.org/)
+The analysis was performed mainly with the open-source software [CellProfiler](https://cellprofiler.org/).
 Install it according to the guidelines on their website.
 
 The data preprocessing script only has minimal dependencies. Depending on what kind of virtual environment you like, there are files to create 
-a virtual environment.
+a conda or pip environment.
   
   - environment.yml &rightarrow; conda
   - requirements.txt &rightarrow; pip
 
+Either use:
+
+```bash
+conda env create --name tif-extractor-env --file=environments.yml
+```
+
+or:
+
+```bash
+pip install -r requirements.txt
+```
 
 
 
@@ -55,7 +67,7 @@ To run the script:
 python3 extract_frames.py path/to/input.csv
 ```
 
-The script needs to be run from the folder that also contains the ./movies folder.
+The script needs to be run from the folder containing the ./movies folder.
 
 
 
