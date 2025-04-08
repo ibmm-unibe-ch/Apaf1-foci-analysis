@@ -1,0 +1,4 @@
+date,treatment,frame_time,imaging_start,imaging_position,cell_id,x,y,frame_appearance_1,frame_disappearance_1,frame_appearance_2,frame_disappearance_2,frame_death,time_appearance_1,time_disappearance_1,time_appearance_2,time_disappearance_2,time_death,life_time_1,life_time_2,diff_app_death_1,diff_dis_death_1,diff_app_death_2,diff_dis_death_2,comment_appearance_1,comment_disappearance_1,comment_disappearance_2,comment_death,division,fluorescence,foci
+20200205,NOQVD,15,50,1,1,29.421,77.926,NA,NA,NA,NA,31,NA,NA,NA,NA,8.58,NA,NA,NA,NA,NA,NA,clear,NO,NO,Nofoci,YES,Normal,once
+20200205,NOQVD,15,50,1,2,56.798,43.393,NA,NA,NA,NA,28,NA,NA,NA,NA,7.83,NA,NA,NA,NA,NA,NA,clear,NO,NO,Nofoci,NO,Normal,once
+20200205,NOQVD,15,50,1,3,38.168,57.479,43,NA,NA,NA,45,11.58,NA,NA,NA,12.08,NA,NA,0.50,NA,NA,NA,clear,NO,NO,NO,NO,Low,once
