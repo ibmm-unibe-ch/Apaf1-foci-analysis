@@ -12,13 +12,6 @@ This Python script was developed to automate the extraction of specific image fr
 
 - Organizes extracted files into date-based subfolders for easy access.
 
-- Includes support for both:
-
-  - Cells with foci appearance
-
-  - Dying cells without foci
-
-  - Control frames (~2 hours before events)
 
 
 ## Directory Structure
