@@ -2,15 +2,12 @@
 This Python script was developed to automate the extraction of specific image frames from multi-frame .tif (TIFF) movies based on manually curated cell imaging metadata. It supports the extraction of frames where cell events occur such as appearance of foci or cell death along with time-matched control frames (e.g., 2 hours before the event). The script also generates corresponding elliptical masks centered on cell coordinates for downstream analysis.
 
 ## Key Features
-- Parses a user-provided CSV file containing experimental metadata (e.g., frame indices, positions, treatments).
 
-- Locates matching TIFF movie files in a specified directory.
-
-- Extracts and saves relevant frames as individual TIFF images.
-
-- Generates circular masks centered on specified (x, y) coordinates from the CSV file.
-
-- Organizes extracted files into date-based subfolders for easy access.
+- Parses a user-provided **CSV file** containing experimental metadata (e.g., frame indices, positions, treatments).
+- Locates matching multi-frame **TIFF movie files** in a specified directory.
+- Extracts and saves specific frame slices as individual TIFF images (per channel).
+- Generates **circular masks** centered on (x, y) coordinates from the metadata.
+- Organizes output files into **date-based subfolders** for easier navigation.
 
 
 
@@ -18,34 +15,39 @@ This Python script was developed to automate the extraction of specific image fr
 
 Input:
 
+```
+./Extract_frames.py 
+
 ./metadata.csv
 
 ./movies/ #directory containing TIFF stacks
+```
+
 
 Output:
 
-./extracted_frames/ with sorted subfolders by acquisition date
-
+```
+./extracted_frames/ # with sorted subfolders by acquisition date
+```
 
 ## Requirements and Installation
 
-The data preprocessing script only has minimal dependencies. Depending on what kind of virtual environment you like, there are files to create a conda or pip environment.
+This script has minimal dependencies. You can set up the environment using either **conda** or **pip**, depending on your preference.
 
-Either use:
-
+### Option 1: Using Conda
 ```bash
-conda env create --name tif-extractor-env --file=environments.yml
+conda env create --name tif-extractor-env --file=environment.yml
+conda activate tif-extractor-env
 ```
 
-or:
+### Option 2: Using pip
 
 ```bash
 pip install -r requirements.txt
 ```
 
 
-The main analysis of Apaf1 foci was performed with the open-source software [CellProfiler](https://cellprofiler.org/).
-Install it according to the guidelines on their website.
+The primary analysis of Apaf1 foci was performed with [CellProfiler](https://cellprofiler.org/), which is not included in the environment. Please install it separately using their official installation instructions.
 
 
 
@@ -57,7 +59,7 @@ To run the preprocessing script:
 python3 extract_frames.py path/to/input.csv
 ```
 
-Note: The script needs to be run from the folder containing the ./movies folder.
+Important: The script must be run from the directory that contains the ./movies folder.
 
 
 
